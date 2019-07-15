@@ -742,14 +742,7 @@ screen and (-ms-high-contrast: none) {
 }
 
 .navbar-custom .navbar-brand.logo-text {
-    font: 500 2.375rem/1.5rem "Montserrat", sans-serif;
-    color: #fff;
-    letter-spacing: -0.5px;
-    text-decoration: none;
-}
-
-.navbar-custom .navbar-brand.logo-text2 {
-    font: 200 2.375rem/1.5rem "Montserrat", sans-serif;
+    font: 300 2rem/1.5rem "Montserrat", sans-serif;
     color: #fff;
     letter-spacing: -0.5px;
     text-decoration: none;
