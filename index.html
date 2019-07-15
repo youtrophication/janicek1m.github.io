@@ -42,9 +42,15 @@
     <script type="text/javascript" src="js\worldmap.js" charset="utf-8"></script>
     <script type="text/javascript" src="js\sampledata.js"></script>
     <script type="text/javascript" src="js/morphext.min.js"></script>
-
+    <script src="js\vex.combined.min.js"></script>
+    <script>vex.defaultOptions.className = 'vex-theme-os'</script>
+    <link rel="stylesheet" href="css/vex.css" />
+    <link rel="stylesheet" href="css/vex-theme-os.css" />
+    <link rel="stylesheet" href="css/vex-theme-wireframe.css" />
     <link rel='shortcut icon' type='image/x-icon' href='images/icon.ico' />
-
+    <script>
+    
+    </script>
 </head>
 
 <body data-spy="scroll" data-target=".fixed-top" onload="displayResult()">
@@ -67,10 +73,10 @@
         <!-- <a class="navbar-brand logo-text2 page-scroll" href="index.html">PATHWAYS TO 2030</a> -->
 
         <!-- Mobile Menu Toggle Button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-awesome fas fa-bars"></span>
                 <span class="navbar-toggler-awesome fas fa-times"></span>
-            </button>
+            </button> -->
         <!-- end of mobile menu toggle button -->
 
         <div class="collapse navbar-collapse">
@@ -154,8 +160,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>The Next Generation of Work</h2>
-                    <div class="p-heading p-large">Pathways to Decent Jobs by 2030</div>
+                    <style>
+                        .special10{
+                            font-size: 27px;
+                            margin-bottom:-5rem;
+                            padding-bottom: 0rem;
+                        }
+                        </style>
+                    <h2 class="special10">THE NEXT GENERATION OF WORK</h2>
+                    <!-- <div class="p-heading p-large">PATHWAYS TO DECENT JOBS BY 2030</div> -->
                 </div>
                 <!-- end of col -->
             </div>
@@ -185,6 +198,12 @@
                         <div class="container">
                             <div class="row">
                                 <script>
+                                  
+                                vex.defaultOptions.className = 'vex-theme-wireframe';
+                                // vex.dialog.defaultOptions.showCloseButton = true;
+                                </script>
+                                    </script>
+                                <script>
                                     jQuery(document).ready(function() {
                                         //https://www.10bestdesign.com/jqvmap/documentation/
                                         jQuery('#vmap').vectorMap({
@@ -195,35 +214,35 @@
                                             selectedColor: '#A21942',
                                             multiSelectRegion: 'true',
                                             //Place array of codes of publication countries here
-                                            selectedRegions: ['GB', 'CA', 'SE', 'MX', 'AU', 'MK', 'US', 'DZ', 'DJ', 'EG', 'IR', 'IQ', 'IL', 'JO', 'KW', 'LB', 'LY', 'MT', 'MA', 'OM', 'QA', 'SA', 'SY', 'TN', 'AE', 'YE', 'AR', 'BO', 'BR', 'CL', 'CO', 'CR', 'DO', 'EC', 'SV', 'GT', 'HT', 'HN', 'NI', 'PA', 'PS', 'PY', 'PE', 'UY', 'VE', 'PG', 'NC', 'NZ', 'FJ', 'SB', 'BD', 'AO', 'BW', 'LS', 'MZ', 'NA', 'ZA', 'SZ', 'ZM', 'ZW', 'MG', 'JP'],
+                                            selectedRegions: ['GB', 'CA', 'SE', 'MX', 'AU', 'MK', 'US', 'DZ', 'DJ', 'EG', 'IR', 'IQ', 'IL', 'JO', 'KW', 'LB', 'LY', 'MT', 'MA', 'OM', 'QA', 'SA', 'SY', 'TN', 'AE', 'YE', 'AR', 'BO', 'BR', 'CL', 'CO', 'CR', 'DO', 'EC', 'SV', 'GT', 'HT', 'HN', 'NI', 'PA', 'PS', 'PY', 'PE', 'UY', 'VE', 'PG', 'NC', 'NZ', 'FJ', 'SB', 'BD', 'AO', 'BW', 'LS', 'MZ', 'NA', 'ZA', 'SZ', 'ZM', 'ZW', 'MG', 'JP','KR', 'CH'],
 
                                             enableZoom: false,
                                             showTooltip: true,
                                             scaleColors: ['#19486A'],
                                             values: sample_data,
                                             normalizeFunction: 'polynomial',
-                                            onRegionClick: function(element, code, region) {
-                                                // event.preventDefault();
-                                                //Add code(s) of publication countries here
-                                                if (code == "gb" || code == "ca" || code == "se" || code == "mx" || code == "au" || code == "mk" || code == "us") {
-                                                    var message = 'After selecting a highlighted country on the map, a pop-up modal box will appear with links to corresponding briefs.'
-                                                    jQuery('#vmap').vectorMap('set', 'colors', {
-                                                        lastSelected: '#A21942'
-                                                    });
-                                                    element.preventDefault();
-                                                    // +
-                                                    //     region +
-                                                    //     '" which has the code: ' +
-                                                    //     code.toUpperCase();
-                                                    // alert(message);
-                                                    alert(message);
-                                                } else {
-                                                    jQuery('#vmap').vectorMap('set', 'colors', {
-                                                        lastSelected: '#19486A'
-                                                    });
-                                                    element.preventDefault();
-                                                    return null;
-                                                }
+                                            // onRegionClick: function(element, code, region) {
+                                            //     // event.preventDefault();
+                                            //     //Add code(s) of publication countries here
+                                            //     if (code == "gb" || code == "ca" || code == "se" || code == "mx" || code == "au" || code == "mk" || code == "us") {
+                                            //         var message = 'After selecting a highlighted country on the map, a pop-up modal box will appear with links to corresponding briefs.'
+                                            //         jQuery('#vmap').vectorMap('set', 'colors', {
+                                            //             lastSelected: '#A21942'
+                                            //         });
+                                            //         element.preventDefault();
+                                            //         // +
+                                            //         //     region +
+                                            //         //     '" which has the code: ' +
+                                            //         //     code.toUpperCase();
+                                            //         // alert(message);
+                                            //         vex.dialog.alert(message);
+                                            //     } else {
+                                            //         jQuery('#vmap').vectorMap('set', 'colors', {
+                                            //             lastSelected: '#19486A'
+                                            //         });
+                                            //         element.preventDefault();
+                                            //         return null;
+                                            //     }
                                             }
 
                                         });
@@ -362,7 +381,7 @@
                                     }
                                     
                                     .card__title {
-                                        color: #696969;
+                                        /* color: #696969; */
                                         font-size: 1.25rem;
                                         font-weight: 300;
                                         letter-spacing: 2px;
@@ -524,15 +543,15 @@
                                         </div>
                                     </li>
 
-                                    <!-- <li class="cards__item">
+                                    <li class="cards__item">
                                         <div class="card">
                                             <div class="card__content">
-                                                <div class="card__title">Pub name</div>
-                                                <p class="card__text">boxers box the box-filled boxy box this will expand once the first couple of sentences of the article is completed. pls let me know when</p>
+                                                <div class="card__title">Education to Employment Systems in the Fourth Industrial Revolution</div>
+                                                <p class="card__text">The Fourth Industrial Revolution is often observed through the lens of fear and uncertainty. Recently coined by Charles Schwab of the World Economic Forum, this era is defined by the intersection of exponential technologies, rapid social transformation, and institutional shifts.</p>
                                                 <button class="btn-solid-lg" onclick="window.location.href = 'publications/15.html';">Read More</button>
                                             </div>
                                         </div>
-                                    </li> -->
+                                    </li>
                                 </ul>
                                 <br>
                                 <br>
@@ -578,10 +597,10 @@
                             <div class="counter-value number-count" data-count="24">1</div>
                             <p class="counter-info">Contributors</p>
                         </div>
-                        <div class="cell">
+                        <!-- <div class="cell">
                             <div class="counter-value" id="result1"></div>
                             <p class="counter-info">Downloads</p>
-                        </div>
+                        </div> -->
                     </div>
                     <!-- end of counter -->
                 </div>
@@ -608,99 +627,6 @@
                 <p class="darkBlue">Pathways to 2030 is an exercise in collective knowledge sharing and action. This is not just a one-time publication but a platform <br>designed to ignite collective action. What commitments can you make to drive action in your organization,
                     region, or world? <br>We recommend committing specific actions using the framework outlined by the ILO Global Initiative on <a href="www.decentjobsforyouth.org">Decent Jobs for Youth</a> </p>
             </center><br>
-            <div class="row">
-                <div class="col-lg-12">
-
-                    <!-- Card Slider -->
-                    <div class="slider-container">
-                        <div class="swiper-container card-slider">
-                            <div class="swiper-wrapper">
-
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <!-- <div class="card"> -->
-                                    <img src="images/slider1.png" height="300px">
-                                    <!-- </div> -->
-                                </div>
-                                <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-
-                                <div class="swiper-slide">
-                                    <!-- <div class="card"> -->
-                                    <img src="images/slider2.png" height="300px">
-                                    <!-- </div> -->
-                                </div>
-                                <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <!-- <div class="card"> -->
-                                    <img src="images/slider3.png" height="300px">
-                                    <!-- </div> -->
-                                </div>
-                                <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-
-                                <div class="swiper-slide">
-                                    <!-- <div class="card"> -->
-                                    <img src="images/slider4.png" height="300px">
-                                    <!-- </div> -->
-                                </div>
-                                <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-
-                                <div class="swiper-slide">
-                                    <!-- <div class="card"> -->
-                                    <img src="images/slider5.png" height="300px">
-                                    <!-- </div> -->
-                                </div>
-                                <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-
-                                <div class="swiper-slide">
-                                    <!-- <div class="card"> -->
-                                    <img src="images/slider6.png" height="300px">
-                                    <!-- </div> -->
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <!-- <div class="card"> -->
-                                    <img src="images/slider7.png" height="300px">
-                                    <!-- </div> -->
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <!-- <div class="card"> -->
-                                    <img src="images/slider8.png" height="300px">
-                                    <!-- </div> -->
-                                </div>
-                                <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-
-                            </div>
-                            <!-- end of swiper-wrapper -->
-
-                            <!-- Add Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <!-- end of add arrows -->
-
-                        </div>
-                        <!-- end of swiper-container -->
-                    </div>
-                    <!-- end of slider-container -->
-                    <!-- end of card slider -->
-
-                </div>
-                <!-- end of col -->
-            </div>
-            <!-- end of row -->
-            <br>
-            <br>
-
-            <!-- <div class="row"> -->
-            <!-- <div class="col-lg-8"> -->
 
             <div margin-left=2px>
                 <div class="row">
@@ -753,8 +679,8 @@
                 </div>
             </div>
 
-                </form>
-
+            </form>
+ 
         </div>
         <!-- end of col-->
     </div>
@@ -764,30 +690,21 @@
     <div class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="footer-col">
                         <h4>About the United Nations Major Group on Children and Youth
                         </h4>
-                        <p>The UN MGCY is the UN General Assembly-mandated, official, formal space for children and youth (under 30) to contribute to and engage in intergovernmental and allied policy processes at the UN. The Youth Science-Policy Interface is a platform of the UN MGCY that seeks to bridge the gap between science and policy in support of the UN SDGs.</p>
-                      
-                        <h4>About the International Labour Organization’s Global Initiative on Decent Jobs for Youth
-                        </h4>
-                        <p>The International Labour Organization’s Global Initiative on Decent Jobs for Youth is the first-ever, comprehensive UN system-wide effort for promoting youth employment worldwide. It brings together the UN and other global key partners to maximize youth employment initiatives to deliver on the SDGs by 2030. </p>
-
-                          <h4>About the U.S. Youth Working Group to the United Nations
-                        </h4>
-                        <p>The U.S. Youth Working Group to the United Nations is the U.S. State Department initiative created to engage U.S. youth in the work of the UN by opening up channels for youth change agents with resources, support, and networks to accelerate the impact of their work related to the UN SDGs.</p>
-
+                        <p>The UN MGCY is the UN General Assembly-mandated, official, formal space for children and youth to contribute to and engage in intergovernmental and allied policy processes at the UN. The Youth Science-Policy Interface is a platform of the UN MGCY that seeks to bridge the gap between science and policy in support of sustainable development.</p>
                     </div>
                 </div>
                 <!-- end of col -->
-                <div class="col-md-6">
+                <div class="col-md-8">
                     <div class="footer-col middle">
                         <h4>Acknowledgements</h4>
-                        <p>The publication, led by Joyce J. Kim and Austin Halbert, with support from Donovan Gutierres, was prepared by the United Nations Major Group on Children Youth (UN MGCY) and its Youth Science-Policy Interface platform, in conjunction with the U.S. Youth Working Group to the United Nations, and the International Labour Organization’s Global Initiative on Decent Jobs for Youth. This publication represents youth voices worldwide providing valuable perspectives and policy suggestions to Sustainable Development Goal (SDG) 8: Promote sustained, inclusive, and sustainable economic growth, full and productive employment and decent work for all and SDG 4: Ensure inclusive and equitable quality education and promote lifelong opportunities for all. We thank all the authors of the fifteen papers for their contributions to the publication.</p>
-                        <p>We thank all those who edited the papers in this publication, including Mostafa Adel, Svankita Arora, Tessa Forshaw, Julia Grifferty, Winnie Mutevu, Adeyemi Okediran, Jiwon Park, and Jenna Yuan. A special thank you to Grace Kim for the design of this report with help from Caroline Yong as well as to Janice Kim for creating the website accompanying this report.</p>
-                        <p>We are grateful to all who contributed to this publication.</p>
-                        <p>Suggested Citation: Kim, J.J. & Halbert, A. (eds.) (2019) The Next Generation of Work: Pathways to Sustainable Economic Growth and Decent Jobs for All by 2030, United Nations Major Group for Children and Youth.</p>
+                        <p>The publication is prepared by the Global Youth Caucus for Decent Jobs and Sustainable Economies, the convening space on SDG 8 within the UN Major Group for Children and Youth (UN MGCY), led by co-editors Joyce J. Kim and Austin Halbert,  and the UN MGCY Youth Science-Policy Interface platform, with support from the U.S. Youth Working Group to the United Nations, an initiative created to engage U.S. youth in the work of the UN. This publication presents youth voices from around the globe, providing valuable perspectives and policy suggestions to Sustainable Development Goal (SDG) 8: Promote sustained, inclusive, and sustainable economic growth, full and productive employment and decent work for all and SDG 4: Ensure inclusive and equitable quality education and promote lifelong opportunities for all. We thank all the authors of the fifteen papers for their contributions to the publication.</p> 
+                        <p>We thank all those who edited the papers in this publication, including Mostafa Adel, Svankita Arora, Tessa Forshaw, Julia Grifferty, Winnie Mutevu, Adeyemi Okediran, Jiwon Park, and Jenna Yuan. A special thank you to Grace Kim for the design of this report with help from Caroline Yong as well as to Janice Kim for creating the website accompanying this report.<br> We are grateful to all who contributed to this publication. </p>
+                            
+                    
 
             <!-- end of row -->
         </div>
