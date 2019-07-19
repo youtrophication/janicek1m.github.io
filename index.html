@@ -144,7 +144,7 @@
                             </script>
 
                             <a class="btn-solid-lg page-scroll" href="#features">EXPLORE</a>
-                            <a href="The Next Generation of Work.pdf" download="The Next Generation of Work"><button class="btn-solid-lg page-scroll" onclick="clickCounter()" type="button">DOWNLOAD</button></a>
+                            <a href="UN SDG8 Design Proposal.pdf" download="The Next Generation of Work"><button class="btn-solid-lg page-scroll" onclick="clickCounter()" type="button">DOWNLOAD</button></a>
                         </div>
                     </div>
                 </div>
@@ -214,36 +214,151 @@
                                             selectedColor: '#A21942',
                                             multiSelectRegion: 'true',
                                             //Place array of codes of publication countries here
-                                            selectedRegions: ['GB', 'CA', 'SE', 'MX', 'AU', 'MK', 'US', 'DZ', 'DJ', 'EG', 'IR', 'IQ', 'IL', 'JO', 'KW', 'LB', 'LY', 'MT', 'MA', 'OM', 'QA', 'SA', 'SY', 'TN', 'AE', 'YE', 'AR', 'BO', 'BR', 'CL', 'CO', 'CR', 'DO', 'EC', 'SV', 'GT', 'HT', 'HN', 'NI', 'PA', 'PS', 'PY', 'PE', 'UY', 'VE', 'PG', 'NC', 'NZ', 'FJ', 'SB', 'BD', 'AO', 'BW', 'LS', 'MZ', 'NA', 'ZA', 'SZ', 'ZM', 'ZW', 'MG', 'JP','KR', 'CH'],
+                                            selectedRegions: ['GB', 'CA', 'SE', 'MX', 'AU', 'MK', 'US', 'DZ', 'DJ', 'EG', 'IR', 'IQ', 'IL', 'JO', 'KW', 'LB', 'LY', 'MT', 'MA', 'OM', 'QA', 'SA', 'SY', 'TN', 'AE', 'YE', 'AR', 'BO', 'BR', 'CL', 'CO', 'CR', 'DO', 'EC', 'SV', 'GT', 'HT', 'HN', 'NI', 'PA', 'PS', 'PY', 'PE', 'UY', 'VE', 'PG', 'NC', 'NZ', 'FJ', 'SB', 'BD', 'AO', 'BW', 'LS', 'MZ', 'NA', 'ZA', 'SZ', 'ZM', 'ZW', 'MG', 'KR', 'CH', 'NG'],
 
                                             enableZoom: false,
                                             showTooltip: true,
                                             scaleColors: ['#19486A'],
                                             values: sample_data,
                                             normalizeFunction: 'polynomial',
-                                            // onRegionClick: function(element, code, region) {
-                                            //     // event.preventDefault();
-                                            //     //Add code(s) of publication countries here
-                                            //     if (code == "gb" || code == "ca" || code == "se" || code == "mx" || code == "au" || code == "mk" || code == "us") {
-                                            //         var message = 'After selecting a highlighted country on the map, a pop-up modal box will appear with links to corresponding briefs.'
-                                            //         jQuery('#vmap').vectorMap('set', 'colors', {
-                                            //             lastSelected: '#A21942'
-                                            //         });
-                                            //         element.preventDefault();
-                                            //         // +
-                                            //         //     region +
-                                            //         //     '" which has the code: ' +
-                                            //         //     code.toUpperCase();
-                                            //         // alert(message);
-                                            //         vex.dialog.alert(message);
-                                            //     } else {
-                                            //         jQuery('#vmap').vectorMap('set', 'colors', {
-                                            //             lastSelected: '#19486A'
-                                            //         });
-                                            //         element.preventDefault();
-                                            //         return null;
-                                            //     }
-                                            // }
+                                            onRegionClick: function(element, code, region) {
+                                                // event.preventDefault();
+                                                //Add code(s) of publication countries here
+                                                if (code == "gb") {
+
+                                                    jQuery('#vmap').vectorMap('set', 'colors', {
+                                                        lastSelected: '#A21942'
+                                                    });
+                                                    element.preventDefault();
+
+                                                    vex.dialog.alert({ unsafeMessage: '<center><h5>United Kingdom</h5></center><a href=publications/1.html><h6>Lifelong Learning: Ensuring the Youth of Today Prosper through Labor Market Reforms</h6></a><p>The future of work and a changing labor market are confronting workers with increased insecurity, isolation and uncertainty. This poses challenges to the youth of today, who were educated under an archaic labor-market paradigm of ‘education-job training-work-retirement’.</p><br>' })
+                                                }
+
+                                                else if (code == "ca") {
+                                                    jQuery('#vmap').vectorMap('set', 'colors', {
+                                                        lastSelected: '#A21942'
+                                                    });
+                                                    element.preventDefault();
+
+                                                    vex.dialog.alert({ unsafeMessage: '<center><h5>Canada</h5></center><a href=publications/2.html><h6>The “Unwritten Rules” of the Workplace: What Can (and should) be Written Down and Taught by Schools and Employers</h6></a><p>This paper argues that education-to-employment transition efforts are insufficient without a lesson on the “unwritten rules” of the workplace.</p><br>' })
+                                                }
+
+                                                else if (code == "se") {
+                                                    jQuery('#vmap').vectorMap('set', 'colors', {
+                                                        lastSelected: '#A21942'
+                                                    });
+                                                    element.preventDefault();
+
+                                                    vex.dialog.alert({ unsafeMessage: '<center><h5>Sweden</h5></center><a href=publications/3.html><h6>Decent Work Requires Decent Innovation: Leveraging Entrepreneurial Education to Boost Innovation and Job Creation in MENA</h6></a><p>In the next 30 years, the Middle East and North Africa (MENA) region faces an unprecedented need for decent work. These jobs should be created by increasing opportunities for private sector organizations to grow.</p><br><a href=publications/15.html><h6>Education to Employment Systems in the Fourth Industrial Revolution</h6></a><p>Recently coined by Charles Schwab of the World Economic Forum, the Fourth Industrial Revolution is defined by the intersection of exponential technologies, rapid social transformation, and institutional shifts.</p>' })
+                                                }
+
+                                                else if (code == "dz" || code == "dj" || code == "dj" || code == "eg" || code == "ir" || code == "iq" || code == "il" || code == "jo" || code == "kw" || code == "lb" || code == "ly" || code == "mt" || code == "ma" || code == "om" || code == "qa" || code == "sa" || code == "sy" || code == "tn" ||code == "ae" ||code == "ye") {
+                                                    jQuery('#vmap').vectorMap('set', 'colors', {
+                                                        lastSelected: '#A21942'
+                                                    });
+                                                    element.preventDefault();
+
+                                                    vex.dialog.alert({ unsafeMessage: '<center><h5>MENA</h5></center><a href=publications/3.html><h6>Decent Work Requires Decent Innovation: Leveraging Entrepreneurial Education to Boost Innovation and Job Creation in MENA</h6></a><p>In the next 30 years, the Middle East and North Africa (MENA) region faces an unprecedented need for decent work. These jobs should be created by increasing opportunities for private sector organizations to grow.</p>' })
+                                                }
+
+                                                else if (code == "us") {
+                                                    jQuery('#vmap').vectorMap('set', 'colors', {
+                                                        lastSelected: '#A21942'
+                                                    });
+                                                    element.preventDefault();
+
+                                                    vex.dialog.alert({ unsafeMessage: '<center><h5>United States</h5></center><a href=publications/5.html><h6>The Human Centered Future of Work(force Development)</h6></a><p>The future of work has never been more uncertain. Forces spanning automation to climate change will impact the livelihoods of billions of people worldwide.</p><a href=publications/6.html><h6>A Cross-Boundary Team Approach to a Collaborative Future of Work</h6></a><p>Cross-boundary innovation teams, composed of internal and external team members, are collectively smarter than teams composed only of internal employees.</p><a href=publications/7.html><h6>Social Entrepreneurship for the Future of Work: Co-creating a Healthier Economy & Workforce in Williamson, West Virginia</h6></a><p>While workforce development initiatives are often designed from the top-down, a human-centered approach calls for decision-making authority on economic policies to be shared with the communities engaged – an approach which social entrepreneurs have been bringing to their work for decades.</p><a href=publications/13.html><h6>Driving Economic Growth through Policy and Technology for the Aging Population</h6></a><p>As life expectancy and quality of life increases, retirement age remains static, and the population of elderly grows, a silver economy is emerging of which societies are not yet prepared to access today due to policy and technology shortfalls. Simultaneously, there is a (dis)inclusion.</p>' })
+                                                }
+
+
+                                                else if (code == "ar" || code == "bo" || code == "br" || code == "cl" || code == "co" || code == "cr" || code == "do" || code == "ec" || code == "sv" || code == "gt" || code == "ht" || code == "hn" || code == "ni" || code == "pa" || code == "ps" || code == "py" || code == "pe" || code == "uy" ||code == "ve" ||code == "me" ||code == "mx") {
+                                                    jQuery('#vmap').vectorMap('set', 'colors', {
+                                                        lastSelected: '#A21942'
+                                                    });
+                                                    element.preventDefault();
+
+                                                    vex.dialog.alert({ unsafeMessage: '<center><h5>Latin America</h5></center><a href=publications/4.html><h6>An Intersectional Gender Lens to Labour Market Interventions in Latin America</h6></a><p>Labour market interventions are essential to shape a future of decent work and economic growth that leaves no one behind. Particularly in Latin America, a region that presents a landscape of lower productivity economic sectors and high dependance on commodities.</p>' })
+                                                }
+
+                                                else if (code == "au") {
+                                                    jQuery('#vmap').vectorMap('set', 'colors', {
+                                                        lastSelected: '#A21942'
+                                                    });
+                                                    element.preventDefault();
+
+                                                    vex.dialog.alert({ unsafeMessage: '<center><h5>Australia</h5></center><a href=publications/5.html><h6>The Human Centered Future of Work(force Development)</h6></a><p>The future of work has never been more uncertain. Forces spanning automation to climate change will impact the livelihoods of billions of people worldwide.</p><a href=publications/8.html><h6>Incubators as a Potential Tool for Employment Creation: A Focus on Sub-Saharan Africa</h6></a><p>Sub-Saharan Africa is confronted by a demographic structure that will see a large part of the population come of working age over the next few years. Providing decent work, especially to the youth, will be a challenge and governments are looking for solutions to tackle the problem.</p><a href=publications/12.html><h6>Pathways for Pacific Youth in the Face of the Climate Crisis</h6></a><p>The future of work has transformed greatly over the last decade. However, in hand with rapid technological advancement and globalisation comes the climate crisis, which is holding many back. The Pacific small island states are particularly vulnerable to the impacts of climate change, natural disasters and environmental degradation.</p>' })
+                                                }
+                                                else if(code == "kr") {
+                                                    jQuery('#vmap').vectorMap('set', 'colors', {
+                                                        lastSelected: '#A21942'
+                                                    });
+                                                    element.preventDefault();
+
+                                                    vex.dialog.alert({ unsafeMessage: '<center><h5>South Korea</h5></center><a href=publications/14.html><h6>Realizing the 21st Century Skill of Global Competence in Higher Education: A Case Study of South Korean Internationalizing Universities</h6></a><p>In South Korea, universities have invested billions of dollars in internationalization efforts, such as attracting foreign students and faculty, increasing English-medium instruction courses, and teaching curriculum related to global competence.</p>' })
+                                                }
+
+                                                else if (code == "pg" || code == "nc" || code == "nz" || code == "fj" || code == "sb") {
+                                                    jQuery('#vmap').vectorMap('set', 'colors', {
+                                                        lastSelected: '#A21942'
+                                                    });
+                                                    element.preventDefault();
+
+                                                    vex.dialog.alert({ unsafeMessage: '<center><h5>Oceania and the Pacific Islands</h5></center><a href=publications/12.html><h6>Pathways for Pacific Youth in the Face of the Climate Crisis</h6></a><p>The future of work has transformed greatly over the last decade. However, in hand with rapid technological advancement and globalisation comes the climate crisis, which is holding many back. The Pacific small island states are particularly vulnerable to the impacts of climate change, natural disasters and environmental degradation.</p>' })
+                                                }
+
+                                                else if (code == "ao" || code == "bw" || code == "ls" || code == "mz" || code == "na" || code == "za" || code == "sz" || code == "zm" || code == "zw" || code == "mg") {
+                                                    jQuery('#vmap').vectorMap('set', 'colors', {
+                                                        lastSelected: '#A21942'
+                                                    });
+                                                    element.preventDefault();
+
+                                                    vex.dialog.alert({ unsafeMessage: '<center><h5>Sub-Saharan Africa</h5></center><a href=publications/8.html><h6>Incubators as a Potential Tool for Employment Creation: A Focus on Sub-Saharan Africa</h6></a><p>Sub-Saharan Africa is confronted by a demographic structure that will see a large part of the population come of working age over the next few years. Providing decent work, especially to the youth, will be a challenge and governments are looking for solutions to tackle the problem.</p><a href=publications/11.html><h6>The economic case for contraceptives: their role in promoting growth and availability of decent jobs for youth in sub-Saharan Africa</h6></a><p>There are a bevy of different social actions in the form of governmental policy or non-government assistance programs that influence the world’s ability to achieve Sustainable Development Goal 8. Especially in the context of developing region such as sub-Saharan Africa, it is critical to examine potential actions that may pay large dividends in economic growth and/or availability of decent work.</p>' })
+                                                }
+
+                                                else if (code == "ch") {
+                                                    jQuery('#vmap').vectorMap('set', 'colors', {
+                                                        lastSelected: '#A21942'
+                                                    });
+                                                    element.preventDefault();
+
+                                                    vex.dialog.alert({ unsafeMessage: '<center><h5>Switzerland</h5></center><a href=publications/15.html><h6>Education to Employment Systems in the Fourth Industrial Revolution</h6></a><p>Recently coined by Charles Schwab of the World Economic Forum, the Fourth Industrial Revolution is defined by the intersection of exponential technologies, rapid social transformation, and institutional shifts.</p><a href=publications/8.html><h6>Incubators as a Potential Tool for Employment Creation: A Focus on Sub-Saharan Africa</h6></a><p>Sub-Saharan Africa is confronted by a demographic structure that will see a large part of the population come of working age over the next few years. Providing decent work, especially to the youth, will be a challenge and governments are looking for solutions to tackle the problem.</p>' })
+                                                }
+
+                                                else if (code == "mk") {
+                                                    jQuery('#vmap').vectorMap('set', 'colors', {
+                                                        lastSelected: '#A21942'
+                                                    });
+                                                    element.preventDefault();
+
+                                                    vex.dialog.alert({ unsafeMessage: '<center><h5>Macedonia</h5></center><a href=publications/6.html><h6>A Cross-Boundary Team Approach to a Collaborative Future of Work</h6></a><p>Cross-boundary innovation teams, composed of internal and external team members, are collectively smarter than teams composed only of internal employees.</p>' })
+                                                }
+
+                                                else if (code == "ng") {
+                                                    jQuery('#vmap').vectorMap('set', 'colors', {
+                                                        lastSelected: '#A21942'
+                                                    });
+                                                    element.preventDefault();
+
+                                                    vex.dialog.alert({ unsafeMessage: '<center><h5>Nigeria</h5></center><a href=publications/9.html><h6>The Nexus of Decent Work and Emigration Trends in Nigeria</h6></a><p>Migration is a phenomenon which significantly influences economic and social development. A consistent negative migration rate for over two decades in Nigeria reveals the high number of people exiting the country in search for “greener pastures”. Existing literature on migration trends has revealed poor economic conditions as one of the major motivations for emigration.</p>' })
+                                                }
+
+                                                else if (code == "bd") {
+                                                    jQuery('#vmap').vectorMap('set', 'colors', {
+                                                        lastSelected: '#A21942'
+                                                    });
+                                                    element.preventDefault();
+
+                                                    vex.dialog.alert({ unsafeMessage: '<center><h5>Bangladesh</h5></center><a href=publications/10.html><h6>Securing Decent Jobs for Marginalized Youth: A Case Study of Bangladesh</h6></a><p>Young people in Bangladesh face a precarious future, despite living in one of the world’s fastest growing economies. The future of work presents countless opportunities to reverse long-term decent work deficits, but it also presents serious challenges that could increase inequalities and joblessness if not well managed. </p>' })
+                                                }
+
+                                                else {
+                                                    jQuery('#vmap').vectorMap('set', 'colors', {
+                                                        lastSelected: '#19486A'
+                                                    });
+                                                    element.preventDefault();
+                                                    return null;
+                                                }
+                                            }
 
                                         });
                                     });
